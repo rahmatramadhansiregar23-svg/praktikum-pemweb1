@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fafafa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      width: 450px;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    .row {
+      display: flex;
+      gap: 10px;
+    }
+
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px 20px;
+      margin-top: 8px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 6px;
+    }
+
+    .section-title {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .terms {
+      margin-top: 15px;
+    }
+
+    button {
+      width: 100%;
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Event Registration Form</h2>
+    <p>Please fill out the form below to register for the event.</p>
+
+    <form>
+      <div class="row">
+        <div style="flex: 1;">
+          <label>First Name</label>
+          <input type="text" placeholder="John" required>
+        </div>
+        <div style="flex: 1;">
+          <label>Last Name</label>
+          <input type="text" placeholder="Doe" required>
+        </div>
+      </div>
+
+      <label>Email Address</label>
+      <input type="email" placeholder="john.doe@example.com" required>
+
+      <label>Phone Number</label>
+      <input type="tel" placeholder="+1 (555) 123-4567" required>
+
+      <div class="row">
+        <div style="flex: 1;">
+          <label>Country</label>
+          <select required>
+            <option value="">Select Country</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>United Kingdom</option>
+            <option>Australia</option>
+            <option>Indonesia</option>
+          </select>
+        </div>
+        <div style="flex: 1;">
+          <label>Date of Birth</label>
+          <input type="date" required>
+        </div>
+      </div>
+
+      <label>T-Shirt Size</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox"> Small</label>
+        <label><input type="checkbox"> Medium</label>
+        <label><input type="checkbox"> Large</label>
+        <label><input type="checkbox"> Extra Large</label>
+      </div>
+
+      <div class="section-title">Emergency Contact Information</div>
+
+      <label>Emergency Contact Name</label>
+      <input type="text" placeholder="Jane Smith" required>
+
+      <label>Emergency Contact Phone Number</label>
+      <input type="tel" placeholder="+1 (555) 123-4567" required>
+
+      <div class="terms">
+        <label><input type="checkbox" required> I agree to the terms and conditions of this event.</label>
+      </div>
+
+      <button type="submit">Register Now</button>
+    </form>
+  </div>
+</body>
+</html>
